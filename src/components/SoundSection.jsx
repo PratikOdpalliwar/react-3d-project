@@ -1,6 +1,15 @@
 import React from 'react'
 
 const SoundSection = () => {
+    const handleLearnmore = () => {
+        const element = document.querySelector(".display-section");
+        window.scrollTo({
+            top: element ? element.getBoundingClientRect().top : 0,
+            left: 0,
+            behavior: "smooth"
+        });
+      };
+      
   return (
    <div className="sound-section wrapper">
     <div className="body">
@@ -21,7 +30,7 @@ const SoundSection = () => {
             </button>
             </li>
             <li>
-                <a className="link">Learn more</a>
+                <a className="link" onClick={handleLearnmore}>Learn more</a>
             </li>
             </ul>
         </div>
